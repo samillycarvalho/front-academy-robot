@@ -5,7 +5,7 @@ Library   String
 resource  variables.resource
 *** Keywords ***
 Abrir o navegador
-    Open Browser  browser=headlesschrome
+    Open Browser  browser=chrome
     Maximize Browser Window
 
 Fechar o navegador
@@ -17,7 +17,7 @@ Passo 1 - Acessar a página de login do academy
 
 Passo 2 - Digitar mail   
    Wait Until Element Is Visible     locator=${mailInput}   
-   Input Text    locator=${mailInput}    text=sysadmin@qacoders.com
+   Input Text    locator=${mailInput}    text=${mailLogin} 
    
    
 Passo 3 - Digitar uma senha   
@@ -75,12 +75,11 @@ Passo 11 - Digitar CPF
 
 Passo 12 - Digitar senha 
    Wait Until Element Is Visible   locator=${passwordcadastroInput}
-   Input Password    locator=${passwordcadastroInput}    password=1234@Test
+   Input Password    locator=${passwordcadastroInput}    password=${passwordLogin}
    
 Passo 13 - Digitar confirmar senha   
     Wait Until Element Is Visible   locator=${confirmpassword}
-    Input Password    locator=${confirmpassword}    password=1234@Test
-  
+    Input Password    locator=${confirmpassword}    password=${passwordLogin}
 
 
 Passo 14 - Clicar no Salvar Novo    
@@ -102,7 +101,7 @@ Clicar em novo cadastro
 
 digitar dados da diretoria
    Wait Until Element Is Visible   locator=${boardname}
-   Input Text   locator=${boardname}   text=Finanças&diretoriaa
+   Input Text   locator=${boardname}   text=${digitarnomedadiretoria}
   
 
 Clicar no botão salvar novo
@@ -120,30 +119,61 @@ Pesquisar a diretoria onde os dados serão alterados
 
 Alterar o dado do cadastro
     Wait Until Element Is Visible     locator=${editardiretoria} 
-    Input Text   locator=${editardiretoria}    text=Financeiro&Fina
+    Input Text   locator=${editardiretoria}    text=${editardiretoriaboard}
    
 
 
 Clicar em salvar alterações 
     Wait Until Element Is Visible     locator=${buttomsalvaralteracao}
     Click Button                      locator=${buttomsalvaralteracao}
-   
 
-##Editar cadastro do usuario     
 
-Clicar em editar
-    Wait Until Element Is Visible    locator=${Editarusuariobotton}
-    Click Button                     locator=${Editarusuariobotton}
+
+Clicar no botão Logout
+    Wait Until Element Is Visible        locator=${buttonLogout}
+     Click Button                        locator=${buttonLogout}
+
+
+Digitar email inválido de login
+   Wait Until Element Is Visible        locator=${mailInput}   
+   Input Text                           locator=${mailInput}        text=     
+   Wait Until Element Is Visible        locator=${passwordinput}  
+   Input Password                       locator=${passwordinput}     password=${passwordLogin}
+   Capture Element Screenshot          locator=${telalogin}      
+
+Digitar email invalido do usuário
+   Wait Until Element Is Visible        locator=${mailcadastroInput} 
+   Input Text                      locator=${mailcadastroInput}      text=${emailinvalidousu} 
+
+Campo FullName inválido
+   Wait Until Element Is Visible   locator=${fullnameImput} 
+   Input Text   locator=${fullnameImput}   text=${fullnameinvalido}       
+
+FullName em branco
+    Wait Until Element Is Visible   locator=${fullnameImput} 
+   Input Text   locator=${fullnameImput}   text=
+
+ Email em branco
+   Wait Until Element Is Visible   locator=${mailcadastroInput}
+   Input Text   locator=${mailcadastroInput}    text=
+
+Perfil de acesso em branco
+   Wait Until Element Is Visible   locator=${accesprofileInput}
+   Input Text   locator=${accesprofileInput}    text=
+
+CPF em branco    
+    Wait Until Element Is Visible   locator=${cpfinput}
+    Input Text   locator=${cpfinput}    text= 
+
+Senha em branco
+   Wait Until Element Is Visible   locator=${passwordcadastroInput}
+   Input Password    locator=${passwordcadastroInput}    password=     
+
+Confimar senha branco
+   Wait Until Element Is Visible   locator=${confirmpassword}
+    Input Password    locator=${confirmpassword}    password=
     
-
-Alterar o dado do cadastro do usuario
-   Wait Until Element Is Visible      locator=${editarusuarioname} 
-   Input Text                         locator=${editarusuarioname}       text=Amanda Sanches
-   Wait Until Element Is Visible      locator=${editarmail} 
-   Input Text                         locator=${editarmail}      text=amamnda23@qacoders.com
-   
-
-Clicar no botão salvar alterações 
-    Wait Until Element Is Visible        locator=${editarbuttonsaveusuario}
-     Click Button                        locator=${editarbuttonsaveusuario}
-    
+Clicar no botão salvar novo usuario
+    Wait Until Element Is Visible   locator=${buttonsave} 
+    Click Button    locator=${buttonsave}
+    Capture Element Screenshot          locator=${teladocadastrodousuario} 

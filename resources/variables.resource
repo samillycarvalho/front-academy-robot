@@ -6,7 +6,7 @@ ${passwordLogin}     1234@Test
 ${mailInput}                   //input[contains(@type,'text')] 
 ${passwordinput}               //input[contains(@type,'password')]
 ${buttomentrar}                //button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedOrange MuiButton-sizeMedium MuiButton-containedSizeMedium css-ojf4v2'][contains(.,'Entrar')]
-${cadastros}                   //span[@class='MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-yb0lig'][contains(.,'Cadastros')]
+${cadastros}                   id:Cadastros
 ${usuarios}                    //span[@class='MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-yb0lig'][contains(.,'Usuários')]
 ${buttomnovocadastro}          Novo Cadastro
 ${fullnameImput}               fullName
@@ -23,7 +23,18 @@ ${bottonsalvarnovo}            save
 ${buttoneditar}                editar   
 ${editardiretoria}             id:boardName
 ${buttomsalvaralteracao}       id:save
-${Editarusuariobotton}         id:edit
-${editarusuarioname}           id:fullName
-${editarmail}                  id:mail
-${editarbuttonsaveusuario}     id:save
+${buttonLogout}                //button[@class='css-1nvbq2d'][contains(.,'Logout')]
+${telalogin}                  //form[contains(., 'Login') or contains(., 'Entrar')]
+${teladocadastrodousuario}                //div[contains(@class, 'css-1gibqcr')]
+
+#Diretoria
+${editardiretoriaboard}       Financeiro&Fi
+${digitarnomedadiretoria}     Finanças&diretoriaa
+
+
+
+## Login invalido
+${emailinvalido}               sam@teste.com
+#cadastro de usuário com email invalido
+${emailinvalidousu}            sasa.com
+${fullnameinvalido}            saa saa  
