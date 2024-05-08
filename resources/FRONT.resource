@@ -5,7 +5,7 @@ Library   String
 resource  variables.resource
 *** Keywords ***
 Abrir o navegador
-    Open Browser  browser=chrome
+    Open Browser  browser=headlesschrome
     Maximize Browser Window
 
 Fechar o navegador
