@@ -30,13 +30,13 @@ Passo 4 - Clicar em entrar
    Click Button      locator=${buttomentrar} 
    
 
-Passo 5 - Clicar em Cadastros   
-    Wait Until Element Is Visible   locator=${cadastros}
-    Click Element   locator=${cadastros}
+Passo 5 - Clicar no Cadastros   
+    Wait Until Element Is Enabled   locator=${cadastro}
+    Click Element   locator=${cadastro}
     
 Passo 6 - Clicar em Usuários  
-    Wait Until Element Is Visible   locator=${usuarios}
-    Click Element   locator=${usuarios}
+    Wait Until Element Is Visible   locator=${usuario}
+    Click Element   locator=${usuario}
      
   
 Passo 7 - Clicar no botão novo cadastro    
@@ -47,14 +47,15 @@ Passo 7 - Clicar no botão novo cadastro
 Passo 8 - Digitar nome completo   
    Wait Until Element Is Visible   locator=${fullnameImput} 
    Input Text   locator=${fullnameImput}   text=Jussara Park
-    Sleep  3s
+    
 
 
-    ${palavra_randomica}     Generate Random String    8    chars=[LETTERS]
+    
+Passo 9 - Digitar e-mail
+    ${palavra_randomica}     Generate Random String    8    chars=[LETTERS]  
     ${palavra_randomica}     Convert To Lower Case     ${palavra_randomica}
     Set Test Variable        ${EMAIL_TEST}             ${palavra_randomica}@hotmail.com
     Log                      ${EMAIL_TEST}
-Passo 9 - Digitar e-mail
    Wait Until Element Is Visible   locator=${mailcadastroInput}
    Input Text   locator=${mailcadastroInput}    text=${EMAIL_TEST}
    
@@ -100,8 +101,12 @@ Clicar em novo cadastro
    
 
 digitar dados da diretoria
+   ${board_randomica}     Generate Random String    8    chars=[LETTERS]  
+    ${board_randomica}     Convert To Lower Case     ${board_randomica}
+    Set Test Variable        ${nomedoboard}             ${board_randomica}
+    Log                      ${nomedoboard}
    Wait Until Element Is Visible   locator=${boardname}
-   Input Text   locator=${boardname}   text=${digitarnomedadiretoria}
+   Input Text   locator=${boardname}   text=${nomedoboard}
   
 
 Clicar no botão salvar novo
@@ -112,14 +117,18 @@ Clicar no botão salvar novo
  
 
 
-Pesquisar a diretoria onde os dados serão alterados
-   Wait Until Element Is Visible     locator=${buttoneditar}   
-   Click Button            locator=${buttoneditar}    
+Clicar em editar diretoria
+   Wait Until Element Is Visible     locator=${buttoneditar}
+   Click Button                     locator=${buttoneditar}    
     
 
 Alterar o dado do cadastro
+    ${editar_randomica}     Generate Random String    8    chars=[LETTERS]  
+    ${editar_randomica}     Convert To Lower Case     ${editar_randomica}
+    Set Test Variable        ${editardoboard}             ${editar_randomica}
+    Log                      ${editardoboard}             
     Wait Until Element Is Visible     locator=${editardiretoria} 
-    Input Text   locator=${editardiretoria}    text=${editardiretoriaboard}
+    Input Text   locator=${editardiretoria}    text=${editardoboard}             
    
 
 
@@ -147,7 +156,7 @@ Digitar email invalido do usuário
 
 Campo FullName inválido
    Wait Until Element Is Visible   locator=${fullnameImput} 
-   Input Text   locator=${fullnameImput}   text=${fullnameinvalido}       
+   Input Text   locator=${fullnameImput}   text=${fullnameinvalido}     
 
 FullName em branco
     Wait Until Element Is Visible   locator=${fullnameImput} 

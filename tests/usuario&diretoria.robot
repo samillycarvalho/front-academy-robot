@@ -10,7 +10,7 @@ CT01: cadastro de usuário
   Passo 2 - Digitar mail 
   Passo 3 - Digitar uma senha
   Passo 4 - Clicar em entrar  
-  Passo 5 - Clicar em Cadastros   
+  Passo 5 - Clicar no Cadastros   
   Passo 6 - Clicar em Usuários 
   Passo 7 - Clicar no botão novo cadastro  
   Passo 8 - Digitar nome completo
@@ -25,7 +25,7 @@ CT02 - preencher o campo fullname invalido
   Passo 2 - Digitar mail 
   Passo 3 - Digitar uma senha
   Passo 4 - Clicar em entrar  
-  Passo 5 - Clicar em Cadastros   
+  Passo 5 - Clicar no Cadastros     
   Passo 6 - Clicar em Usuários 
   Passo 7 - Clicar no botão novo cadastro  
   Campo FullName inválido
@@ -40,7 +40,7 @@ CT03 - preencher o campo email com email invalido
   Passo 2 - Digitar mail 
   Passo 3 - Digitar uma senha
   Passo 4 - Clicar em entrar  
-  Passo 5 - Clicar em Cadastros   
+  Passo 5 - Clicar no Cadastros  
   Passo 6 - Clicar em Usuários 
   Passo 7 - Clicar no botão novo cadastro  
   Passo 8 - Digitar nome completo
@@ -56,7 +56,7 @@ CT04 - campos obrigatorios em branco
   Passo 2 - Digitar mail 
   Passo 3 - Digitar uma senha
   Passo 4 - Clicar em entrar  
-  Passo 5 - Clicar em Cadastros   
+  Passo 5 - Clicar no Cadastros      
   Passo 6 - Clicar em Usuários 
   Passo 7 - Clicar no botão novo cadastro 
   FullName em branco
@@ -66,3 +66,26 @@ CT04 - campos obrigatorios em branco
   Senha em branco
   Confimar senha branco
   Clicar no botão salvar novo usuario
+  
+CT05 - cadastrar diretoria
+  Passo 1 - Acessar a página de login do academy
+  Passo 2 - Digitar mail
+  Passo 3 - Digitar uma senha
+  Passo 4 - Clicar em entrar  
+  Passo 5 - Clicar no Cadastros  
+  Clicar em diretorias
+  Clicar em novo cadastro 
+  Digitar dados da diretoria
+  Clicar no botão salvar novo
+
+CT06 - editar diretoria 
+  Passo 1 - Acessar a página de login do academy
+  Passo 2 - Digitar mail
+  Passo 3 - Digitar uma senha
+  Passo 4 - Clicar em entrar  
+  Passo 5 - Clicar no Cadastros  
+  Clicar em diretorias
+  Clicar em editar diretoria
+  Alterar o dado do cadastro
+  Clicar em salvar alterações
+    
