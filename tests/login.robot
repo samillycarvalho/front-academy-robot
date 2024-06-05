@@ -11,4 +11,4 @@ CT01: Login de acesso
    Passo 2 - Digitar mail
    Passo 3 - Digitar uma senha
    Passo 4 - Clicar em entrar  
-
+   Clicar no botão Logout

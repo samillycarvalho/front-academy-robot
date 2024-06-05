@@ -48,8 +48,6 @@ Passo 8 - Digitar nome completo
    Wait Until Element Is Visible   locator=${fullnameImput} 
    Input Text   locator=${fullnameImput}   text=Jussara Park
     
-
-
     
 Passo 9 - Digitar e-mail
     ${palavra_randomica}     Generate Random String    8    chars=[LETTERS]  
@@ -68,43 +66,43 @@ Passo 10 - Digitar perfil de acesso
  
 Passo 11 - Digitar CPF 
      ${cpf_randomico}=        Generate Random String   11    chars=[NUMBERS]
-    Set Test Variable        ${CPF}    ${cpf_randomico}
-    Log               ${CPF}
-    Wait Until Element Is Visible   locator=${cpfinput}
-    Input Text   locator=${cpfinput}    text=${CPF} 
+    Set Test Variable        ${CPF}        ${cpf_randomico}
+    Log                      ${CPF}
+    Wait Until Element Is Visible           locator=${cpfinput}
+    Input Text                locator=${cpfinput}        text=${CPF} 
     
 
 Passo 12 - Digitar senha 
    Wait Until Element Is Visible   locator=${passwordcadastroInput}
-   Input Password    locator=${passwordcadastroInput}    password=${passwordLogin}
+   Input Password                    locator=${passwordcadastroInput}    password=${passwordLogin}
    
 Passo 13 - Digitar confirmar senha   
     Wait Until Element Is Visible   locator=${confirmpassword}
-    Input Password    locator=${confirmpassword}    password=${passwordLogin}
+    Input Password                   locator=${confirmpassword}    password=${passwordLogin}
 
 
 Passo 14 - Clicar no Salvar Novo    
     Wait Until Element Is Visible   locator=${buttonsave} 
-    Click Button    locator=${buttonsave}
+    Click Button                    locator=${buttonsave}
     
 
     
 ##Diretoria
 Clicar em diretorias
     Wait Until Element Is Visible   locator=${diretoria}
-    Click Element   locator=${diretoria}
+    Click Element                   locator=${diretoria}
     
 Clicar em novo cadastro  
    Wait Until Element Is Visible   locator=${novocadastrobuttomdire}
-   Click Button    locator=${novocadastrobuttomdire}     
+   Click Button                    locator=${novocadastrobuttomdire}     
    
    
 
 digitar dados da diretoria
    ${board_randomica}     Generate Random String    8    chars=[LETTERS]  
-    ${board_randomica}     Convert To Lower Case     ${board_randomica}
-    Set Test Variable        ${nomedoboard}             ${board_randomica}
-    Log                      ${nomedoboard}
+   ${board_randomica}     Convert To Lower Case     ${board_randomica}
+   Set Test Variable        ${nomedoboard}             ${board_randomica}
+   Log                      ${nomedoboard}
    Wait Until Element Is Visible   locator=${boardname}
    Input Text   locator=${boardname}   text=${nomedoboard}
   
